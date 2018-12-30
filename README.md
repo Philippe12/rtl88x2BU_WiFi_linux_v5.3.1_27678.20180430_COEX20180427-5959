@@ -175,3 +175,17 @@ DAEMON_CONF="/etc/hostapd/hostapd.conf"
 ```
 
 This completes setup for raspberry pi to act as router.
+
+# Disable native wifi
+
+edit the file
+```bash
+sudo nano /etc/modprobe.d/raspi-blacklist.conf
+```
+
+and add
+
+```nano
+blacklist brcmfmac
+blacklist brcmutil
+```
